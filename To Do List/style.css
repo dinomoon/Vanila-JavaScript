@@ -1,0 +1,128 @@
+/* reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* common */
+input,
+button {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  padding: 10px 16px;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input:active,
+input:focus,
+button:active,
+button:focus,
+select:active,
+select:focus,
+option:active,
+option:focus {
+  border: none;
+  outline: none;
+}
+
+select {
+  padding: 10px;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(
+    45deg,
+    #ff9a9e 0%,
+    #fad0c4 99%,
+    #fad0c4 100%
+  );
+  font-family: "Poppins", sans-serif;
+}
+
+i {
+  pointer-events: none;
+}
+
+/* header */
+
+.header {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__title {
+  color: #fff;
+  font-size: 3rem;
+}
+
+/* form */
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.todo-submit-btn {
+  background-color: #ff9a9e;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+
+.todo-submit-btn:hover {
+  background-color: #fff;
+  color: #ff9a9e;
+}
+
+/* todo-list */
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-item {
+  display: flex;
+  margin-bottom: 8px;
+  transition: all 0.5s;
+}
+.list-item div {
+  width: 280px;
+  background-color: #fff;
+  padding: 10px 16px;
+}
+
+.list-item button {
+  color: #fff;
+}
+
+.complete-btn {
+  background-color: #fad0c4;
+}
+
+.delete-btn {
+  background-color: #ff9a9e;
+}
+
+.list-item.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.list-item.deleted {
+  transform: translateY(100px) rotate(20deg);
+  opacity: 0;
+}
