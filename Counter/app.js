@@ -10,12 +10,13 @@ btns.forEach((btn) => {
     } else if (btnClassList.contains('decrease')) {
       number--;
     } else {
+      number = 0;
     }
 
     if (number > 0) {
-      value.style.color = '#ff6b6b';
+      value.style.color = 'Crimson';
     } else if (number < 0) {
-      value.style.color = '#5c7cfa';
+      value.style.color = 'RoyalBlue';
     } else {
       value.style.color = '#495057';
     }
