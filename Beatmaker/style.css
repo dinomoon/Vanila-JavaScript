@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+button {
+  cursor: pointer;
+  color: #fff;
+  background-color: #777;
+  border: none;
+  outline: none;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.kick-pad {
+  background-color: rgb(172, 188, 231);
+}
+
+.snare-pad {
+  background-color: rgba(245, 219, 171, 0.966);
+}
+
+.hihat-pad {
+  background-color: rgba(240, 180, 169, 0.918);
+}
+
+.kick-pad.active {
+  background-color: rgb(85, 125, 235);
+}
+
+.snare-pad.active {
+  background-color: rgba(238, 176, 62, 0.966);
+}
+
+.hihat-pad.active {
+  background-color: rgba(238, 103, 79, 0.918);
+}
+
+.kick-track,
+.snare-track,
+.hihat-track {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.controls .mute {
+  padding: 1rem;
+}
+
+.controls .select {
+  padding: 1rem 0;
+}
+
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
+
+.pad {
+  transition: all 0.5s ease;
+}
+
+.play {
+  margin-top: 2rem;
+  padding: 1.6rem;
+  border-radius: 50%;
+}
+
+.play.active {
+  background-color: #333;
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.mute.active {
+  background-color: #333;
+}
+
+.tempo {
+  width: 20%;
+  margin-top: 2rem;
+}
+
+.tempo-slider {
+  width: 100%;
+  -webkit-appearance: none;
+  padding: 0.2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  background-color: #aaa;
+  border-radius: 1rem;
+}
+
+input {
+  outline: none;
+}
+
+.tempo p {
+  text-align: center;
+}
